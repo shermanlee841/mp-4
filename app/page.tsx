@@ -60,7 +60,7 @@ export default function Home() {
             <h1>Art Explorer</h1>
 
             <h2>Featured Artwork</h2>
-            {/* had issues with pre rendering, used suspense to fix issue with the cache component */}
+            {/* had issues with pre rendering when running npm dev build, used suspense to fix issue with the cache component */}
             <Suspense fallback={<p>Loading artwork...</p>}>
                 <ArtworkList />
             </Suspense>
