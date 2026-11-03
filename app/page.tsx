@@ -15,4 +15,18 @@ type ArtworkData = {
     records: Artwork[];
 };
 
-a
+async function ArtworkList() {
+    let data: ArtworkData | null = null;
+
+    try {
+        data = await getArtworks();
+    } catch {
+        data = null;
+    }
+
+    if (!data) {
+        return <p>Unable to retrieve artwork from API.</p>;
+    }
+
+
+}
